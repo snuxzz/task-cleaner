@@ -52,4 +52,21 @@ Closes programs that run in the background (system tray):
 
 ---
 
-## 🎮 How to use
+## 🛠️ How to add your own apps
+
+Open the script in Notepad and add this line:
+
+```batch
+taskkill /f /im "YourApp.exe" >nul 2>&1 && echo [OK] Your App closed
+How to find the process name:
+
+Press Ctrl + Shift + Esc (Task Manager)
+
+Find your app → Right click → Go to details
+
+Copy the .exe name
+
+Example – adding Chrome:
+
+batch
+taskkill /f /im chrome.exe >nul 2>&1 && echo [OK] Chrome closed
