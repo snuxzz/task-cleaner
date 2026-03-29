@@ -26,7 +26,7 @@ Always check code before running. Use modified versions at your own risk.
 
 ## 📌 What it does
 
-Closes programs that run in the background (system tray):
+Closes programs that run in the background (system tray) :
 
 | Category | Apps |
 |----------|------|
