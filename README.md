@@ -96,6 +96,8 @@ Example – adding Chrome:
 batch
 taskkill /f /im chrome.exe >nul 2>&1 && echo [OK] Chrome closed
 
+```
+
 ## 💻 THE BAT CODE (program)
 
 You can download `task-cleaner.bat`, right click it, and select **Edit** in Notepad to see the code yourself.
