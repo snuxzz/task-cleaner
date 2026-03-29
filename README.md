@@ -1,4 +1,12 @@
 # task-cleaner
+## 📥 Download
+
+1. Click **Code** → **Download ZIP**
+2. Extract the ZIP file
+3. Take `task-cleaner.bat` (you can delete the rest)
+4. Right click → **Run as administrator**
+
+   
 Clean unnecessary background tasks with one click
 # ⭐ Task-Cleaner ⭐
 
