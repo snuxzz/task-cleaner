@@ -70,3 +70,86 @@ Example – adding Chrome:
 
 batch
 taskkill /f /im chrome.exe >nul 2>&1 && echo [OK] Chrome closed
+
+## 💻 THE BAT CODE (program)
+
+You can download `task-cleaner.bat`, right click it, and select **Edit** in Notepad to see the code yourself.
+
+## 📜 Full code
+
+```batch
+@echo off
+title Task-Cleaner
+color 0a
+
+:: Check administrator
+net session >nul 2>&1
+if %errorLevel% neq 0 (
+    echo ========================================
+    echo        TASK-CLEANER
+    echo ========================================
+    echo.
+    echo [ERROR] Run as administrator!
+    echo.
+    echo Right click -^> Run as administrator
+    echo.
+    pause
+    exit /b
+)
+
+cls
+echo ========================================
+echo        TASK-CLEANER
+echo ========================================
+echo.
+echo Closing background tasks...
+echo.
+
+:: MESSENGERS
+taskkill /f /im Discord.exe >nul 2>&1 && echo [OK] Discord
+taskkill /f /im Slack.exe >nul 2>&1 && echo [OK] Slack
+taskkill /f /im Teams.exe >nul 2>&1 && echo [OK] Microsoft Teams
+taskkill /f /im Telegram.exe >nul 2>&1 && echo [OK] Telegram
+taskkill /f /im Signal.exe >nul 2>&1 && echo [OK] Signal
+taskkill /f /im Skype.exe >nul 2>&1 && echo [OK] Skype
+taskkill /f /im WhatsApp.exe >nul 2>&1 && echo [OK] WhatsApp
+taskkill /f /im Zoom.exe >nul 2>&1 && echo [OK] Zoom
+
+:: GAMING
+taskkill /f /im Steam.exe >nul 2>&1 && echo [OK] Steam
+taskkill /f /im "EpicGamesLauncher.exe" >nul 2>&1 && echo [OK] Epic Games
+taskkill /f /im "Battle.net.exe" >nul 2>&1 && echo [OK] Battle.net
+taskkill /f /im "GalaxyClient.exe" >nul 2>&1 && echo [OK] GOG Galaxy
+taskkill /f /im Origin.exe >nul 2>&1 && echo [OK] Origin
+taskkill /f /im "UbisoftConnect.exe" >nul 2>&1 && echo [OK] Ubisoft Connect
+taskkill /f /im RiotClientServices.exe >nul 2>&1 && echo [OK] Riot Client
+
+:: MUSIC
+taskkill /f /im Spotify.exe >nul 2>&1 && echo [OK] Spotify
+taskkill /f /im TIDAL.exe >nul 2>&1 && echo [OK] TIDAL
+taskkill /f /im AppleMusic.exe >nul 2>&1 && echo [OK] Apple Music
+taskkill /f /im Music.UI.exe >nul 2>&1 && echo [OK] Amazon Music
+
+:: CLOUD
+taskkill /f /im OneDrive.exe >nul 2>&1 && echo [OK] OneDrive
+taskkill /f /im Dropbox.exe >nul 2>&1 && echo [OK] Dropbox
+taskkill /f /im "GoogleDriveFS.exe" >nul 2>&1 && echo [OK] Google Drive
+taskkill /f /im iCloudServices.exe >nul 2>&1 && echo [OK] iCloud
+
+:: TOOLS
+taskkill /f /im "Creative Cloud.exe" >nul 2>&1 && echo [OK] Adobe Creative Cloud
+taskkill /f /im jetbrains-toolbox.exe >nul 2>&1 && echo [OK] JetBrains Toolbox
+taskkill /f /im "Docker Desktop.exe" >nul 2>&1 && echo [OK] Docker Desktop
+
+:: OTHER
+taskkill /f /im qbittorrent.exe >nul 2>&1 && echo [OK] qBittorrent
+taskkill /f /im transmission-qt.exe >nul 2>&1 && echo [OK] Transmission
+
+echo.
+echo ========================================
+echo        ALL DONE!
+echo ========================================
+echo.
+
+timeout /t 2 /nobreak >nul
+exit
