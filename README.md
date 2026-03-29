@@ -6,8 +6,25 @@
 3. Take `task-cleaner.bat` (you can delete the rest)
 4. Right click → **Run as administrator**
 
+   ## ⚠️ Windows may block this file
+
+When you download `task-cleaner.bat`, Windows Smart App Control may block it.
+
+**Why?** Because the file comes from the internet. Windows blocks ALL `.bat` files from the internet – even safe ones.
+
+**Solution:**
+1. Right click `task-cleaner.bat` → Properties
+2. Check "Unblock" at the bottom
+3. Click OK
+
+Or click "More info" → "Run anyway".
+
+The code is open source – you can open it in Notepad and see exactly what it does. No hidden malware or something like that.
+
    
 Clean unnecessary background tasks with one click
+
+
 # ⭐ Task-Cleaner ⭐
 
 Clean unnecessary background tasks with **one click**.
